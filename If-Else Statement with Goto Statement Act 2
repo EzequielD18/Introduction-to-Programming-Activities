@@ -55,3 +55,77 @@ int main() {
     {
         printf("goodbye!");
     } 
+    return 0;
+  }
+  
+  
+  // 
+  #include <stdio.h>
+
+int main() {
+    
+    //Storing Data
+    char ans;
+    int exit;
+    
+    //Data Display
+    char name[50] = "Niel Ezequiel Dungao";
+    char dob[50] = "June 18, 2004";
+    char address[100] = "Blk 8 Lot 11 Belize St., El Pueblo Del Rio Subd., Cay Pombo, Santa Maria, Bulacan";
+    char number[30] = "9652012720";
+    jump:
+    //Option of the users
+    printf("Please choose one letter and enter (USE CAPITAL LETTER ONLY).\n");
+    printf("N = Name\n");
+    printf("D = Date of Birth\n");
+    printf("A = Address\n");
+    printf("C = Contact\n");     
+
+    
+    fflush(stdin);
+    //Asking the use to choose one letter from the options
+    printf("\n Enter your choosen letter: ");
+    scanf("%c", &ans);
+
+    if (ans == 'N')
+    {
+        printf("Name: %s\n", name);
+    }
+    else if (ans == 'D')
+    {
+        printf("Date of Birth: %s\n", dob);
+    }
+    else if (ans == 'A')
+    {
+        printf("Address: %s\n", address);
+    }
+    else if (ans == 'C')
+    {
+        printf("Contact: %s\n", number);
+    }
+    else
+    {
+     printf("Encounter Error\n");   
+    }
+
+    //Looping Funtion
+    printf("Do you want to try again?: ");
+    scanf("%d", &exit);
+    if (exit == 1)
+    {   
+        goto jump;
+    } 
+    else
+    {
+        printf("Thank you & Goodbye!");
+    }     
+            
+    
+    
+       
+      
+    return 0;
+
+
+}
+//
