@@ -1,0 +1,61 @@
+#include <stdio.h>
+
+int main() {
+    
+    //storing data from the user
+    char ans;
+    
+    //data that will be display
+    char name[80] = "Niel Ezequiel Dungao";
+    char date[50] = "June 18 2004";
+    char address[100] = "Blk 8 Lot 11 El Pueblo Del Rio Subv. Cay Pombo";
+    int number = 96520127;
+    
+    do
+    {
+        //options of the user
+        printf("Please choose one letter and enter (USE CAPITAL LETTER ONLY).\n");
+        printf("N = Name\n");
+        printf("D = Date of Birth\n");
+        printf("A = Address\n");
+        printf("C = Number\n");
+        printf("X = Exit\n");
+    
+       
+        fflush(stdin);
+        //Asking the user to choose one from the options
+        printf("Enter your choosen letter:");
+        scanf("%c", &ans);
+    
+        switch(ans)
+        {
+            case('N'):
+            printf("Name: %s\n", name);     
+            break;
+            
+            case('D'):
+            printf("Date of Birth: %s\n", date);  
+            break;
+            
+            case('A'):
+            printf("Address: %s\n", address);
+            break;
+            
+            case('C'):
+            printf("Contact: %d\n", number);
+            break;
+            
+            // input is invalid
+            default:
+                printf("Error, Invalid Input!\n");
+                break;
+
+            case('X'):
+            printf("Process Complete, Thank You!\n");
+        }
+
+    } while (ans != 'X');
+    
+
+    return 0;
+}
