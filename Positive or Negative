@@ -1,0 +1,56 @@
+#include <stdio.h>
+
+int main() {
+    
+    //storing variables
+    char name[50];
+    char course[50];
+    int num;
+    int ans;
+    
+    printf("\n/==================== Let's Identify! ====================/\n");
+    printf("Please enter your name: ");
+    fgets(name, sizeof(name),stdin);
+    printf("Please enter your course: ");
+    fgets(course, sizeof(course),stdin);
+    printf("\n");
+    
+    printf("/==================== Let's Get Started! ====================/\n");
+    //looping funtion
+    do{
+        printf("Please enter an integer: ");
+        /*
+            Verifying the value if int or char
+            if int the program will continue
+            but if the value is char the program
+            will loop until the value is int.
+        */
+        while(scanf("%d",&num) != 1)
+        {
+             printf("Please enter an integer: ");
+            while(getchar() != '\n');
+            
+        }
+        if(num > 0)
+        {
+            printf("%d is Positive\n", num);
+        }
+        else if (num < 0)
+        {
+            printf("%d is Negative\n", num);
+        }
+        else
+        {
+            printf("Your value is Zero\n");
+        }
+        
+        printf("Do you want to try again? (Enter 1 for Yes, 2 for No.):");
+        scanf("%d", &ans);
+
+    } while (ans != 2);
+    printf("/========================================/\n");
+    printf("Goodbye and Thank You %s from %s\n", name, course);
+    
+
+    return 0;
+}
